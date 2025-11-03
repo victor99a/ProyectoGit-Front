@@ -36,8 +36,8 @@ export default function Carrito() {
     }
   }
 
-  if (loading) return <p className="text-secondary">Cargando carrito…</p>
-  if (error)   return <div className="alert alert-danger">Error: {error}</div>
+  if (loading) return <p className="text-secondary">Cargando carrito</p>
+  if (error)   return <div className="alert alert-danger">Error!: {error}</div>
 
   const items = data?.items ?? []
   const total = data?.total ?? 0
@@ -52,7 +52,7 @@ export default function Carrito() {
       </div>
 
       {!items.length ? (
-        <p className="text-secondary">Tu carrito está vacío.</p>
+        <p className="text-secondary">El carrito está vacío.</p>
       ) : (
         <div className="table-responsive">
           <table className="table table-dark align-middle">
